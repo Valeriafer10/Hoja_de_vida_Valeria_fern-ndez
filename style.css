@@ -1,0 +1,241 @@
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente similar a la del encabezado */
+    background-color: #f0f0f0; /* Color de fondo similar */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Similar a la distribución de la imagen */
+    max-width: 900px; /* Ancho máximo aproximado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Para que el border-radius funcione en los hijos */
+}
+
+/* Barra Lateral Izquierda (Perfil y Contacto) */
+.left-section {
+    background-color: #e9ecef; /* Color de fondo similar */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 5px solid #d9d9d9; /* Borde alrededor de la imagen */
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-section h1 {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.left-section h2 {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.left-section .profile-heading {
+    font-size: 1.3em;
+    color: #222;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-section p {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left; /* Alineación del texto del perfil */
+}
+
+.contact-heading {
+    font-size: 1.3em;
+    color: #222;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info p {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.contact-info i {
+    color: #555;
+    margin-right: 8px;
+}
+
+/* Sección Derecha (Información Principal) */
+.right-section {
+    padding: 30px;
+}
+
+.name-title {
+    margin-bottom: 20px;
+}
+
+.name-title h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente similar al nombre */
+    font-size: 2.5em;
+    color: #007bff; /* Color azul similar */
+    margin-bottom: 5px;
+}
+
+.name-title h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.personal-details p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.section-heading {
+    font-size: 1.3em;
+    color: #222;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.education-item h3,
+.skills-heading h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 8px;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: "•";
+    color: #007bff; /* Color del punto de la lista */
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+/* Ajustes específicos para las secciones de la derecha */
+.right-section h1#perfil,
+.right-section h1#contacto,
+.right-section h1#educacion,
+.right-section h1#habilidades {
+    /* Estos IDs ya no son necesarios aquí, usamos clases más genéricas */
+    display: none; /* Ocultar los títulos originales si es necesario */
+}
+
+.right-section .education-section h2,
+.right-section .skills-section h2 {
+    font-size: 1.3em;
+    color: #222;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.right-section .education-section div {
+    margin-bottom: 15px;
+}
+
+.right-section .education-section h3 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.right-section .education-section p.date {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design (Similar al original) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+    }
+
+    .left-section .profile-heading,
+    .left-section .contact-heading {
+        width: 100%;
+    }
+
+    .right-section {
+        padding: 20px;
+    }
+}
